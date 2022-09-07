@@ -13,14 +13,15 @@ step "deploy-a-package" {
             Octopus.Action.Package.AutomaticallyUpdateAppSettingsAndConnectionStrings = "False"
             Octopus.Action.Package.DownloadOnTentacle = "False"
             Octopus.Action.Package.FeedId = "octopus-server-built-in"
-            Octopus.Action.Package.PackageId = "transformtest"
+            Octopus.Action.Package.PackageId = "cactransform"
+            Octopus.Action.RunOnServer = "false"
         }
         worker_pool_variable = ""
 
         packages {
             acquisition_location = "Server"
             feed = "octopus-server-built-in"
-            package_id = "transformtest"
+            package_id = "cactransform"
             properties = {
                 SelectionMode = "immediate"
             }
